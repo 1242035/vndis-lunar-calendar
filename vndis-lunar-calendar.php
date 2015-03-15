@@ -19,10 +19,12 @@ class Vndis_Lunar_Calendar_Widget extends WP_Widget {
 	}
 	function register_static()
 	{
-		wp_register_script( 'vndis-lunar-calendar-script', plugins_url( '/static/lunar.min.js', __FILE__),array('jquery-core'), '1.0.0', true);
-		wp_enqueue_script(  'vndis-lunar-calendar-script');
 		wp_register_style( 'vndis-lunar-calendar-style', plugins_url( '/static/lunar.css', __FILE__));
 		wp_enqueue_style(  'vndis-lunar-calendar-style');
+		wp_register_script( 'vndis-lunar-calendar-script', plugins_url( '/static/lunar.min.js', __FILE__),array('jquery-core'), '1.0.0', true);
+		wp_enqueue_script(  'vndis-lunar-calendar-script');
+		wp_register_script( 'vndis-lunar-calendar-run-script', plugins_url( '/static/lunar.js', __FILE__),array('jquery-core'), '1.0.0', true);
+		wp_enqueue_script(  'vndis-lunar-calendar-run-script');
 	}
 	public function widget( $args, $instance ) 
 	{
@@ -33,9 +35,6 @@ class Vndis_Lunar_Calendar_Widget extends WP_Widget {
 		}
 		?>
 		<div class="vndis-lunar-calendar"></div>
-		<script language="javascript">
-			( funtion( $ ){ jQuery('.vndis-lunar-calendar').vndisCalendar() });	
-		</script>
 		<?php
 		echo $args['after_widget'];
 	}
