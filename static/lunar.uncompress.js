@@ -444,7 +444,7 @@
 		var middleYear = (prevMonth == 12) ? (yy-1) : ( (nextMonth == 1) ? (yy+1) : yy );
 		res += ('<tr class="head-first"><td class="'+ this.defaults.classPrevYear+' '+ this.defaults.getCalendar+'" data-month="'+mm+'" data-year="'+prevYear+'">' + this.defaults.prevYearLink + '</td>');
 		res += ('<td class="'+ this.defaults.classPrevMonth+' '+ this.defaults.getCalendar+'" data-month="'+prevMonth+'" data-year="'+middleYear+'">' + this.defaults.prevMonthLink + '</td>');
-		res += ('<td class="'+ this.defaults.classMontName+'">'+monthName+'</td>');
+		res += ('<td colspan="3" class="'+ this.defaults.classMontName+'">'+monthName+'</td>');
 		res += ('<td class="'+ this.defaults.classNextMonth+' '+ this.defaults.getCalendar+'" data-month="'+nextMonth+'" data-year="'+middleYear+'">' + this.defaults.nextMonthLink + '</td>');
 	    res += ('<td class="'+ this.defaults.classNextYear+' '+ this.defaults.getCalendar+'" data-month="'+mm+'" data-year="'+nextYear+'">'+this.defaults.nextYearLink+'</td></tr>');
 		res += ('<tr class="head-second">');

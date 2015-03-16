@@ -1,3 +1,5 @@
+.lunar-calendar{background:#fff;}
+
 .lunar-calendar ul{list-style: none;margin: 0;padding: 0;position: relative;width: 100%;margin: auto;font: 1.2em;overflow: hidden;}
 .lunar-calendar ul li{float: left;height: 50px;width: 100%;overflow: hidden;}
 .lunar-calendar ul li ul{width: 100%;height: auto;}
@@ -5,14 +7,21 @@
 .lunar-calendar ul li.head-first li a{text-decoration: none;}
 .lunar-calendar ul li.head-second{background:rgb(229,61,21);text-align: center;line-height: 50px;}
 .lunar-calendar ul li ul.head li{width:20%;float: left;}
-.lunar-calendar ul li.head-second ul li, .lunar-calendar ul li.row ul li{width:12.2857%; padding:0 1%; float: left;position: relative; vertical-align: middle;display: table-cell;}
+.lunar-calendar ul li.head-second ul li, .lunar-calendar ul li.row ul li{border-bottom: 1px solid #abc;width:14.2857%; padding:0 1%; float: left;position: relative; vertical-align: middle;display: table-cell;}
 .lunar-calendar ul li.head-second ul li:nth-of-type(2n){background:#d9330c;}
-.lunar-calendar ul li.row ul li:nth-of-type(2n){background:#eaeaea;}
-.lunar-calendar ul li.lunar-calendar-item{cursor: pointer;}
-.lunar-calendar-get-month{cursor: pointer;}
-.lunar-calendar ul li.lunar-calendar-item div.solar{width: 100%;height: 50%;} 
-.lunar-calendar ul li.lunar-calendar-item div.lunar{width: 100%; height: 47%;}
-.lunar-calendar ul li.lunar-calendar-item div.solar{text-align: left;padding-top: 2px;padding-left: 2px;}
-.lunar-calendar ul li.lunar-calendar-item div.lunar{text-align: right;color: #f50ae9;padding-bottom: 2px;padding-right: 2px;}
-.sunday{color: red !important;}
-.saturday{color: blue !important;}
+.lunar-calendar ul li.row ul li:nth-of-type(2n){background:#989292;}
+.lunar-calendar ul li.lunar-calendar-item,.lunar-calendar-get-month{cursor: pointer;}
+.lunar-calendar ul li.lunar-calendar-item div.solar{text-align: left;padding-top: 2px;padding-left: 2px;width: 100%;height: 50%;color:black;}
+.lunar-calendar ul li.lunar-calendar-item div.lunar{text-align: right;color: #f50ae9;padding-bottom: 2px;padding-right: 2px;width: 100%;height: 47%;}
+
+.lunar-calendar table{width: 100%;border: 1px solid black;}
+.lunar-calendar table th, .lunar-calendar table td{border: 1px solid black;}
+.lunar-calendar table tr td{height: 50px;}
+.lunar-calendar table tr.head-first{border-spacing:none; }
+.lunar-calendar table tr.head-first td{text-align: center;background: rgb(208,156,25);}
+.lunar-calendar table tr.head-second td{background: rgb(229,61,21); text-align: center;}
+.lunar-calendar table tr td.lunar-calendar-item div.solar{text-align: left;padding-top: 2px;padding-left: 2px;width: 100%;height: 50%;color:black;}
+.lunar-calendar table tr td.lunar-calendar-item  div.lunar{text-align: right;color: #f50ae9;padding-bottom: 2px;padding-right: 2px;width: 100%;height: 47%;}
+
+.sunday div.solar{color: red !important;}
+.saturday div.lunar{color: blue !important;}
