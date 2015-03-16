@@ -465,7 +465,7 @@
 	}
 	Calendar.prototype.getUlCell = function(lunarDate, solarDate, solarMonth, solarYear) 
 	{
-		this.getToday();
+		var today = new Date();
 		var className = this.defaults.classItem + ' col';
 		var dow = (lunarDate.julianDate + 1) % 7;
 		if (dow == 0) 
@@ -476,7 +476,7 @@
 		{
 			className += " saturday";
 		}
-		if (solarDate == this.currentDate && solarMonth == this.currentMonth+1 && solarYear == this.currentYear) 
+		if (solarDate == today.getDate() && solarMonth == today.getMonth()+1 && solarYear == today.getFullYear() ) 
 		{
 			className += " today";
 		}
@@ -502,7 +502,7 @@
 	}
 	Calendar.prototype.getTbCell = function(lunarDate, solarDate, solarMonth, solarYear) 
 	{
-		this.getToday();
+		var today = new Date();
 		var className = this.defaults.classItem + ' col';
 		var dow = (lunarDate.julianDate + 1) % 7;
 		if (dow == 0) 
@@ -513,7 +513,7 @@
 		{
 			className += " saturday";
 		}
-		if (solarDate == this.currentDate && solarMonth == this.currentMonth+1 && solarYear == this.currentYear) 
+		if (solarDate == today.getDate() && solarMonth == today.getMonth()+1 && solarYear == today.getFullYear() ) 
 		{
 			className += " today";
 		}

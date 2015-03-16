@@ -25,3 +25,5 @@
 
 .sunday div.solar{color: red !important;}
 .saturday div.lunar{color: blue !important;}
+.today{background: yellow !important;}
+.new-year-day, .lunar2{background: rgb(207, 207, 32) !important;}
