@@ -419,11 +419,12 @@
 		var prevYear = (yy > 1800 && yy < 2199)  ?  (yy-1) : yy;
 		var nextMonth = mm < 12 ? mm + 1 : 1;
 	    var nextYear = (yy > 1800 && yy < 2199)  ?  (yy+1) : yy ;
-		var middleYear = (prevMonth == 12) ? (yy-1) : ( (nextMonth == 1) ? (yy+1) : yy );
+		var prevMiddleYear = (mm == 1) ? (yy-1) : yy;
+		var nextMiddleYear = (mm == 12) ? (yy+1) : yy;
 		res += ('<li class="head-first"><ul class="head"><li class="'+ this.defaults.classPrevYear+' '+ this.defaults.getCalendar+'" data-month="'+mm+'" data-year="'+prevYear+'">' + this.defaults.prevYearLink + '</li>');
-		res += ('<li class="'+ this.defaults.classPrevMonth+' '+ this.defaults.getCalendar+'" data-month="'+prevMonth+'" data-year="'+middleYear+'">' + this.defaults.prevMonthLink + '</li>');
+		res += ('<li class="'+ this.defaults.classPrevMonth+' '+ this.defaults.getCalendar+'" data-month="'+prevMonth+'" data-year="'+prevMiddleYear+'">' + this.defaults.prevMonthLink + '</li>');
 		res += ('<li class="'+ this.defaults.classMontName+'">'+monthName+'</li>');
-		res += ('<li class="'+ this.defaults.classNextMonth+' '+ this.defaults.getCalendar+'" data-month="'+nextMonth+'" data-year="'+middleYear+'">' + this.defaults.nextMonthLink + '</li>');
+		res += ('<li class="'+ this.defaults.classNextMonth+' '+ this.defaults.getCalendar+'" data-month="'+nextMonth+'" data-year="'+nextMiddleYear+'">' + this.defaults.nextMonthLink + '</li>');
 	    res += ('<li class="'+ this.defaults.classNextYear+' '+ this.defaults.getCalendar+'" data-month="'+mm+'" data-year="'+nextYear+'">'+this.defaults.nextYearLink+'</li></ul></li>');
 		res += ('<li class="head-second"><ul class="head-day">');
 		for (var i = 0; i <= 6; i++) 
@@ -441,11 +442,12 @@
 		var prevYear = (yy > 1800 && yy < 2199)  ?  (yy-1) : yy;
 		var nextMonth = mm < 12 ? mm + 1 : 1;
 	    var nextYear = (yy > 1800 && yy < 2199)  ?  (yy+1) : yy ;
-		var middleYear = (prevMonth == 12) ? (yy-1) : ( (nextMonth == 1) ? (yy+1) : yy );
+		var prevMiddleYear = (mm == 1) ? (yy-1) : yy;
+		var nextMiddleYear = (mm == 12) ? (yy+1) : yy;
 		res += ('<tr class="head-first"><td class="'+ this.defaults.classPrevYear+' '+ this.defaults.getCalendar+'" data-month="'+mm+'" data-year="'+prevYear+'">' + this.defaults.prevYearLink + '</td>');
-		res += ('<td class="'+ this.defaults.classPrevMonth+' '+ this.defaults.getCalendar+'" data-month="'+prevMonth+'" data-year="'+middleYear+'">' + this.defaults.prevMonthLink + '</td>');
+		res += ('<td class="'+ this.defaults.classPrevMonth+' '+ this.defaults.getCalendar+'" data-month="'+prevMonth+'" data-year="'+prevMiddleYear+'">' + this.defaults.prevMonthLink + '</td>');
 		res += ('<td colspan="3" class="'+ this.defaults.classMontName+'">'+monthName+'</td>');
-		res += ('<td class="'+ this.defaults.classNextMonth+' '+ this.defaults.getCalendar+'" data-month="'+nextMonth+'" data-year="'+middleYear+'">' + this.defaults.nextMonthLink + '</td>');
+		res += ('<td class="'+ this.defaults.classNextMonth+' '+ this.defaults.getCalendar+'" data-month="'+nextMonth+'" data-year="'+nextMiddleYear+'">' + this.defaults.nextMonthLink + '</td>');
 	    res += ('<td class="'+ this.defaults.classNextYear+' '+ this.defaults.getCalendar+'" data-month="'+mm+'" data-year="'+nextYear+'">'+this.defaults.nextYearLink+'</td></tr>');
 		res += ('<tr class="head-second">');
 		for (var i = 0; i <= 6; i++) 
